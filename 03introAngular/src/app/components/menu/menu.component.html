@@ -1,12 +1,5 @@
 <ul class="list-group">
-    <li class="list-group-item">
-        <a href="inicio">Inicio</a>
-    </li>
-    <li class="list-group-item">
-        <a href="noticias">Noticias</a>
-    </li>
-
-    <li class="list-group-item">
-        <a href="sugerencias">Sugerencias</a>
-    </li>
+        <a *ngFor="let item of items" routerLink={{item.ruta}} class="list-group-item">
+            {{item.nombre}}
+        </a>
 </ul>

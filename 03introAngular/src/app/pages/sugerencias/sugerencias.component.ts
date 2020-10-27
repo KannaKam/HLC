@@ -9,6 +9,8 @@ export class SugerenciasComponent implements OnInit {
 
   constructor() { }
 
+  public mostrar:boolean;
+  
   ngOnInit(): void {
   }
 
