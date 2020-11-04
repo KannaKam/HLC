@@ -1,1 +1,42 @@
-<p>Este es el componente noticias</p>
+<div class="container-fluid row ml-1 mr-1">
+   <div class="card col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-5 border-dark"
+      *ngFor="let articulo of articulos; index as i">
+      <div *ngIf=articulos>
+
+         <img src="{{articulo.urlToImage}}" class="card-img-top" *ngIf="articulo.urlToImage">
+         <img src="../../../assets/NoImageLarge.png" class="card-img-top" *ngIf="!articulo.urlToImage">
+
+
+         <h3 class="card-title" *ngIf="articulo.title">{{articulo.title}}</h3>
+         <h3 class="card-title" *ngIf="!articulo.title">Título desconocido</h3>
+         <div class="card-header bg-transparent border-dark  " *ngIf="articulo.author">{{articulo.author}}</div>
+         <div class="card-title bg-transparent border-dark " *ngIf="!articulo.author">Autor desconocido</div>
+
+         <div class="card-body">
+            <h5 class="card-title" *ngIf="articulo.description">{{articulo.description}}</h5>
+            <h5 class="card-title" *ngIf="!articulo.description">Sin descripción</h5>
+
+
+            <div class="d-flex justify-content-end">
+               <a href="{{articulo.url}}" class="btn btn-dark text-light" *ngIf="articulo.url">Ver más</a>
+               <a href="{{articulo.url}}" class="btn btn-dark text-light disabled" *ngIf="!articulo.url">Ver más</a>
+            </div>   
+            
+         </div>
+
+         <div class="card-footer bg-transparent" *ngIf="articulo.source.name">{{articulo.source.name}}</div>
+         <div class="card-footer bg-transparent" *ngIf="!articulo.source.name">Fuente anónima</div>
+
+         <p class="card-text mb-2 d-flex justify-content-end">
+            <small class="text-muted" *ngIf="articulo.publishedAt">Publicado el {{articulo.publishedAt}}</small>
+            <small class="text-muted" *ngIf="!articulo.publishedAt">Fecha desconocida</small>
+         </p>
+
+      </div>
+
+
+   </div>
+
+
+
+</div>

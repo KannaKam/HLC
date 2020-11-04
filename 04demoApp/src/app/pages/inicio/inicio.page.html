@@ -3,25 +3,9 @@
     <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-
-  <ion-list>
-    <ion-item detail>
-      <ion-label>Pokemon esmeralda</ion-label>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item  detail>
-      <ion-label>Jesucristo</ion-label>
-    </ion-item>
-  </ion-list>
-  <!--
-<ion-button routerLink='/action-sheet' expand="block" color="primary">
-    Action-sheet
-  </ion-button>
-
-  <ion-button routerLink='/alert' expand="block" color="tertiary">
-    Alert
-  </ion-button>
-  -->
+<ion-content class="ion-padding">
+    <ion-button *ngFor="let c of componente" [routerLink]="c.ruta" expand="full" [color]="c.color">
+      <ion-icon slot="start" [name]="c.icono"></ion-icon>
+      {{c.nombre}}
+    </ion-button>
 </ion-content>

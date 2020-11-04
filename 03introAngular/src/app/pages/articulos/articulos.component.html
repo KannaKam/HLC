@@ -1,1 +1,19 @@
-<p>articulos works!</p>
+<p>Artículos</p>
+
+<div class="container-fluide">
+<div class="row">
+    <div class="card" *ngFor="let articulo of articulos; index as i;">
+<div class="card-body bg-primary">
+<h4 class="card-title text-light">{{articulo.nombre}}</h4>
+<p class="card-title text-light">Talla: {{articulo.talla}}</p>
+<button (click)="articulo.oculto = !articulo.oculto" class="btn btn-light">{{articulo.oculto ? "Ocultar Precio" : "Mostrar Precio"}} </button>
+<span class="card-text text-light ml-3 " *ngIf="articulo.oculto">{{articulo.precio}}</span>
+</div>
+
+    </div>
+</div>
+
+
+
+
+</div>

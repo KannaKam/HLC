@@ -7,23 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  public items:any = [
-  {
-    nombre:'Página inicial',
-    ruta:'inicio'
-  },
-  {
-    nombre:'Noticias',
-    ruta:'noticias'
-  },
-  {
-    nombre:'Sugerencias',
-    ruta:'sugerencias'
-  }
-];
+  public items: any = [
+    {
+      nombre: "Página inicial",
+      ruta: "inicio"
+    },
+    {
+
+      nombre: "Noticias",
+      ruta: "noticias"
+
+    },
+    {
+      nombre: "Sugerencias",
+      ruta: "sugerencias"
+    },
+    {
+      nombre: "Articulos",
+      ruta: "articulos"
+    }
+  ];
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
 }

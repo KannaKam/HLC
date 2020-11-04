@@ -8,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class SugerenciasComponent implements OnInit {
 
   constructor() { }
-
   public mostrar:boolean;
-  
   ngOnInit(): void {
+    this.mostrar=true;
   }
 
 }
