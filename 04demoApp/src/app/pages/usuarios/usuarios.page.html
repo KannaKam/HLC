@@ -1,0 +1,16 @@
+<app-cabecera 
+  [titulo]="'Usuarios'">
+</app-cabecera>
+
+<ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="refresca($event)">
+      <ion-refresher-content
+        refreshingSpinner="crescent"
+        refreshingText="Cargando...">
+      </ion-refresher-content>
+    </ion-refresher>
+  <ion-button (click)="onClick()" expand="block" shape="round">
+    Muestra usuarios
+  </ion-button>
+</ion-content>

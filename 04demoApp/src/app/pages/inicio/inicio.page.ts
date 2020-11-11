@@ -24,6 +24,12 @@ export class InicioPage implements OnInit {
       ruta: "/alert",
       icono: "add",
       color: "success"
+    },
+    {
+      nombre: "Usuarios",
+      ruta: "/usuarios",
+      icono: "person",
+      color: "warning"
     }
   ];
   ngOnInit() {
