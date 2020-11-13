@@ -7,8 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
-import { ComponenteModule } from '../../componentes/componente.module';
-import { CabeceraComponent } from '../../componentes/cabecera/cabecera.component';
+import { ComponentesModule } from 'src/app/componentes/componentes.module';
 
 @NgModule({
   imports: [
@@ -16,7 +15,7 @@ import { CabeceraComponent } from '../../componentes/cabecera/cabecera.component
     FormsModule,
     IonicModule,
     InicioPageRoutingModule,
-    ComponenteModule
+    ComponentesModule
   ],
   declarations: [InicioPage]
 })

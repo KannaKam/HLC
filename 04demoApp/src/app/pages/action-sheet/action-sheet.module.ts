@@ -7,8 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ActionSheetPageRoutingModule } from './action-sheet-routing.module';
 
 import { ActionSheetPage } from './action-sheet.page';
-import { CabeceraComponent } from '../../componentes/cabecera/cabecera.component';
-import { ComponenteModule } from 'src/app/componentes/componente.module';
+import { ComponentesModule } from 'src/app/componentes/componentes.module';
 
 @NgModule({
   imports: [
@@ -16,7 +15,7 @@ import { ComponenteModule } from 'src/app/componentes/componente.module';
     FormsModule,
     IonicModule,
     ActionSheetPageRoutingModule,
-    ComponenteModule
+    ComponentesModule
   ],
   declarations: [ActionSheetPage]
 })

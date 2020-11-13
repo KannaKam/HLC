@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Componente } from '../../interfaces/interface';
+import { Componente } from 'src/app/interfaces/interfaces';
+import { DatosComponentesService } from 'src/app/services/datos-componentes.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,31 +9,13 @@ import { Componente } from '../../interfaces/interface';
 })
 export class InicioPage implements OnInit {
 
+  constructor(private _datos:DatosComponentesService) {}
+  public componentes:Componente[]=[];
 
+  
 
-  constructor() { }
-
-  public componente: Componente[] = [
-    {
-      nombre: "Action-sheet",
-      ruta: "/action-sheet",
-      icono: "trash",
-      color: "primary"
-    },
-    {
-      nombre: "Alert",
-      ruta: "/alert",
-      icono: "add",
-      color: "success"
-    },
-    {
-      nombre: "Usuarios",
-      ruta: "/usuarios",
-      icono: "person",
-      color: "warning"
-    }
-  ];
-  ngOnInit() {
+  async ngOnInit() {
+    this.componentes = await this._datos.getDatos();
   }
 
 }

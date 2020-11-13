@@ -1,22 +1,19 @@
-<app-cabecera [titulo]="'Alert'">
-</app-cabecera>
-<ion-content class="ion-padding">
-    <ion-button (click)="onClick(1)">
-        Alert
-    </ion-button>
-    <ion-button (click)="onClick(2)">
-        Alert Multiple Buttons
-    </ion-button>
-    <ion-button (click)="onClick(3)">
-        Alert Confirm
-    </ion-button>
-    <ion-button (click)="onClick(4)">
-        Alert Prompt
-    </ion-button>
-    <ion-button (click)="onClick(5)">
-        Alert Radio
-    </ion-button>
-    <ion-button (click)="onClick(6)">
-        Alert Checkbox
-    </ion-button>
+<app-cabecera [titulo]="'Alert'"></app-cabecera>
+
+<ion-content>
+   
+
+    <!-- <ion-list *ngFor="let boton of botones, index as i">
+        <ion-item>
+            <ion-button expand="full" (click)="onClick(boton.numero)" [color]="boton.color">
+                {{boton.nombre}}
+            </ion-button>
+        </ion-item>
+    </ion-list> -->
+
+    <ion-grid>
+        <ion-row >
+            <ion-col *ngFor="let boton of botones, index as i" size="6"><ion-button expand="full" (click)="onClick(boton.numero)" [color]="boton.color">{{boton.nombre}}</ion-button></ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

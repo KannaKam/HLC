@@ -4,16 +4,19 @@ export interface Componente{
     icono:string,
     color:string
 }
+
 export interface Boton{
     nombre:string,
-    numero: number
+    numero: number,
+    color: string
 }
-export interface RootObject {
+
+export interface RespuestaUsuarios {
   page: number;
   per_page: number;
   total: number;
   total_pages: number;
-  data: Datum[];
+  data: Usuario[];
   ad: Ad;
 }
 
@@ -23,7 +26,7 @@ export interface Ad {
   text: string;
 }
 
-export interface Datum {
+export interface Usuario {
   id: number;
   email: string;
   first_name: string;

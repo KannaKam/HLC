@@ -8,20 +8,25 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class ActionSheetPage implements OnInit {
 
+  constructor(public actionSheetController: ActionSheetController) { }
+
   ngOnInit() {
   }
-  onClick(){
+
+  onClick() {
     this.presentActionSheet();
   }
-  constructor(public actionSheetController: ActionSheetController) {}
+
+
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Opciones',
-      cssClass: 'rojo',
+      backdropDismiss :false,
       buttons: [{
         text: 'Delete',
         role: 'destructive',
+        cssClass: 'rojo',
         icon: 'trash',
         handler: () => {
           console.log('Delete clicked');
@@ -43,5 +48,4 @@ export class ActionSheetPage implements OnInit {
     });
     await actionSheet.present();
   }
-
 }

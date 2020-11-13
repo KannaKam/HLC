@@ -6,9 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
-  declarations: [
-    CabeceraComponent
-  ],
+  declarations: [CabeceraComponent],
   imports: [
     CommonModule,
     IonicModule
@@ -17,4 +15,4 @@ import { IonicModule } from '@ionic/angular';
     CabeceraComponent
   ]
 })
-export class ComponenteModule { }
+export class ComponentesModule { }

@@ -7,8 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AlertPageRoutingModule } from './alert-routing.module';
 
 import { AlertPage } from './alert.page';
-import { CabeceraComponent } from '../../componentes/cabecera/cabecera.component';
-import { ComponenteModule } from '../../componentes/componente.module';
+import { ComponentesModule } from 'src/app/componentes/componentes.module';
 
 @NgModule({
   imports: [
@@ -16,7 +15,7 @@ import { ComponenteModule } from '../../componentes/componente.module';
     FormsModule,
     IonicModule,
     AlertPageRoutingModule,
-    ComponenteModule
+    ComponentesModule
   ],
   declarations: [AlertPage]
 })

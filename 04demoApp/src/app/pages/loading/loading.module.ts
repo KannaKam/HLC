@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { UsuariosPageRoutingModule } from './usuarios-routing.module';
+import { LoadingPageRoutingModule } from './loading-routing.module';
 
-import { UsuariosPage } from './usuarios.page';
-import { ComponentesModule } from 'src/app/componentes/componentes.module';
+import { LoadingPage } from './loading.page';
+import { ComponentesModule } from '../../componentes/componentes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UsuariosPageRoutingModule,
+    LoadingPageRoutingModule,
     ComponentesModule
   ],
-  declarations: [UsuariosPage]
+  declarations: [LoadingPage]
 })
-export class UsuariosPageModule {}
+export class LoadingPageModule {}
