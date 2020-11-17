@@ -12,22 +12,27 @@ export class LoadingPage implements OnInit {
   public miLoading:HTMLIonLoadingElement;
   constructor(public loadingController: LoadingController,
               private _mensajeService:MensajesService,
-              private _usuarioService:UsuariosService) { }
+              private _usuariosService:UsuariosService) { }
 
   async presentLoading(){
     this.miLoading = await this.loadingController.create({
       message:'Cargando...',
     });
+    await this.miLoading.present();
   }
 
   onClick(){
     this.presentLoading();
     setTimeout(()=>{
       this.miLoading.dismiss();
-    },1000);
+    },2000);
   }
   async onClick2(){
     this._mensajeService.muestraLoading("Cargando");
+    let data = await this._usuariosService.getUsuarios(1);
+    data = await this._usuariosService.getUsuarios(1);
+    data = await this._usuariosService.getUsuarios(1);
+    this._mensajeService.ocultaLoading();
   }
   
   ngOnInit() {

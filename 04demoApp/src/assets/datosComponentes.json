@@ -8,13 +8,13 @@
       {
         "nombre": "Alert",
         "ruta": "/alert",
-        "icono": "alert-circle-outline",
+        "icono": "alert-outline",
         "color": "danger"
       },
       {
         "nombre": "Usuarios",
         "ruta": "/usuarios",
-        "icono": "person",
+        "icono": "person-circle-outline",
         "color": "warning"
       },
       {
@@ -22,5 +22,17 @@
         "ruta": "/loading",
         "icono": "refresh",
         "color": "tertiary"
+      },
+      {
+        "nombre": "Botones",
+        "ruta": "/buttons",
+        "icono": "arrow-up-circle-outline",
+        "color": "success"
+      },
+      {
+        "nombre": "Tabs",
+        "ruta": "/tabs",
+        "icono": "settings",
+        "color": "medium"
       }
 ]

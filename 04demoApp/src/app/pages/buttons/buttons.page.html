@@ -1,0 +1,38 @@
+<app-cabecera [titulo]="'Botones'"></app-cabecera>
+
+<ion-content>
+  <ion-chip color="tertiary" outline="true">
+    <ion-icon name="logo-discord" color="tertiary" outline="true"></ion-icon>
+    <ion-label>Discord</ion-label>
+  </ion-chip>
+  <ion-chip color="warning" outline="true">
+    <ion-icon name="logo-instagram" color="warning" outline="true"></ion-icon>
+    <ion-label>Instagram</ion-label>
+  </ion-chip>
+  <ion-chip color="primary" outline="true">
+    <ion-icon name="logo-twitter" color="primary" outline="true"></ion-icon>
+    <ion-label>Twitter</ion-label>
+  </ion-chip>
+  <ion-chip color="danger" outline="true">
+    <ion-icon name="logo-youtube" color="danger"></ion-icon>
+    <ion-label >Youtube</ion-label>
+  </ion-chip>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="center" horizontal="start" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="share" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="logo-youtube" color="success"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

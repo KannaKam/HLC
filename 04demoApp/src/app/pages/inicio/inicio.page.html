@@ -1,27 +1,16 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="dark">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button menu="menuPrincipal">
       </ion-menu-button>
     </ion-buttons>
-    <!-- <ion-button (click)="onClick()">
-      <ion-icon slot="start" name="menu"></ion-icon>
-    </ion-button> -->
     <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-
-  <ion-list >
-
     <ion-item class="ion-margin" *ngFor="let componente of componentes, index as i" detail [routerLink]="componente.ruta" expand="full" [color]="componente.color">
-
       <ion-icon slot="start" [name]="componente.icono"></ion-icon>
       {{componente.nombre}}
-
-
     </ion-item>
-  </ion-list>
 </ion-content>
