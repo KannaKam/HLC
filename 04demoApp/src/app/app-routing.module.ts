@@ -36,6 +36,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
+    path: 'item-sliding',
+    loadChildren: () => import('./pages/item-sliding/item-sliding.module').then( m => m.ItemSlidingPageModule)
+  },
+  {
+    path: 'slides',
+    loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'inicio',
     pathMatch: 'full'

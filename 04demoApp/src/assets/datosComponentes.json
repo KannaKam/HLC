@@ -34,5 +34,18 @@
         "ruta": "/tabs",
         "icono": "settings",
         "color": "medium"
+      },
+      {
+        "nombre": "Item Slide",
+        "ruta": "/item-sliding",
+        "icono": "arrow-back-outline",
+        "color": "dark"
+      },
+      
+      {
+        "nombre": "Slides",
+        "ruta": "/slides",
+        "icono": "arrow-back-outline",
+        "color": "light"
       }
 ]
