@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/interfaces/interfaces';
+import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
   selector: 'app-slides',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidesPage implements OnInit {
 
-  constructor() { }
+  constructor(private _usuariosService: UsuariosService) { }
 
-  ngOnInit() {
+  public usuarios: Usuario[] = [];
+  async ngOnInit() {
+    const datos = await this._usuariosService.getUsuarios(1);
+    this.usuarios.unshift(...datos.data);
   }
 
 }

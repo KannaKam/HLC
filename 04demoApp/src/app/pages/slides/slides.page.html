@@ -2,14 +2,17 @@
 <ion-content>
   <ion-content>
     <ion-slides pager="true" class="slide">
-      <ion-slide class="color1">
-        <h1>Slide 1</h1>
-      </ion-slide>
-      <ion-slide  class="color2">
-        <h1>Slide 2</h1>
-      </ion-slide>
-      <ion-slide  class="color3">
-        <h1>Slide 3</h1>
+      <ion-slide *ngFor="let usuario of usuarios">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src={{usuario.avatar}}>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{usuario.first_name}}</h2>
+            <h3>{{usuario.last_name}}</h3>
+            <p>{{usuario.email}}</p>
+          </ion-label>
+        </ion-item>
       </ion-slide>
     </ion-slides>
   </ion-content>
