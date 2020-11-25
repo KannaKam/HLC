@@ -44,10 +44,18 @@ const routes: Routes = [
     loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
   },
   {
+    path: 'modal-demo',
+    loadChildren: () => import('./pages/modal-demo/modal-demo.module').then( m => m.ModalDemoPageModule)
+  },
+  {
+    path: 'modal-window',
+    loadChildren: () => import('./pages/modal-window/modal-window.module').then( m => m.ModalWindowPageModule)
+  },
+  /*{
     path: '**',
     redirectTo: 'inicio',
     pathMatch: 'full'
-  },
+  },*/
 ];
 
 @NgModule({

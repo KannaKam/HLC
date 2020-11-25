@@ -41,11 +41,17 @@
         "icono": "arrow-back-outline",
         "color": "dark"
       },
-      
       {
         "nombre": "Slides",
         "ruta": "/slides",
         "icono": "arrow-back-outline",
         "color": "light"
+      }
+      ,
+      {
+        "nombre": "Modal",
+        "ruta": "/modal-demo",
+        "icono": "person-outline",
+        "color": "danger"
       }
 ]

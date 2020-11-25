@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { Usuario } from 'src/app/interfaces/interfaces';
 import { UsuariosService } from '../../services/usuarios.service';
 
@@ -9,7 +10,8 @@ import { UsuariosService } from '../../services/usuarios.service';
 })
 export class SlidesPage implements OnInit {
 
-  constructor(private _usuariosService: UsuariosService) { }
+  constructor(private _usuariosService: UsuariosService,
+              private modalController:ModalController) { }
 
   public usuarios: Usuario[] = [];
   async ngOnInit() {
@@ -17,4 +19,7 @@ export class SlidesPage implements OnInit {
     this.usuarios.unshift(...datos.data);
   }
 
+  editar(){
+    this.modalController.dismiss(dato);
+  }
 }
