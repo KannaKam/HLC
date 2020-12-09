@@ -19,7 +19,4 @@ export class SlidesPage implements OnInit {
     this.usuarios.unshift(...datos.data);
   }
 
-  editar(){
-    this.modalController.dismiss(dato);
-  }
 }

@@ -1,0 +1,7 @@
+{
+  "name": "miqrbar",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

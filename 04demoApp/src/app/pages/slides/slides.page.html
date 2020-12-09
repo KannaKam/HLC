@@ -3,11 +3,6 @@
   <ion-content>
     <ion-slides pager="true" class="slide">
       <ion-slide *ngFor="let usuario of usuarios">
-        <ion-buttons slot="end">
-          <ion-button (click)="cancelar()">
-            <ion-icon slot="icon-only" name="close-outline"></ion-icon>
-          </ion-button>
-        </ion-buttons>
         <ion-item>
           <ion-avatar slot="start">
             <img src={{usuario.avatar}}>

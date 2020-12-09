@@ -24,21 +24,21 @@ export class ActionSheetPage implements OnInit {
       header: 'Opciones',
       backdropDismiss :false,
       buttons: [{
-        text: 'Delete',
+        text: 'Borrar',
         role: 'destructive',
         cssClass: 'rojo',
         icon: 'trash',
         handler: () => {
-          console.log('Delete clicked');
+          console.log('Deleteertyertyrty clicked');
         }
       }, {
-        text: 'Share',
+        text: 'Compartir',
         icon: 'share',
         handler: () => {
           console.log('Share clicked');
         }
       }, {
-        text: 'Cancel',
+        text: 'Cancelar',
         icon: 'close',
         role: 'cancel',
         handler: () => {
