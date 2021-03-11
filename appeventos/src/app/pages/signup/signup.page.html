@@ -1,0 +1,52 @@
+<ion-content>
+    <div class="bg">
+      <div class="login">
+        <div class="login-triangle"></div>
+    
+        <h2 class="login-header">Sign up</h2>
+    
+        <form class="login-container" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+          <p>
+            <ion-input type="text" formControlName="username" placeholder="Username"></ion-input>
+          </p>
+            <div *ngFor="let error of validationMessages.username">
+              <ng-container *ngIf="username.hasError(error.type) && username.touched">
+                  <small class="errorMessage">{{error.message}}</small>
+              </ng-container>
+            </div>
+            <p>
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+          </p>
+            <div *ngFor="let error of validationMessages.password">
+              <ng-container *ngIf="password.hasError(error.type) && password.touched">
+                  <small class="errorMessage">{{error.message}}</small>
+              </ng-container>
+          </div>
+          <p>
+            <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+          </p>
+          <div *ngFor="let error of validationMessages.email">
+            <ng-container *ngIf="email.hasError(error.type) && email.touched">
+                <small class="errorMessage">{{error.message}}</small>
+            </ng-container>
+        </div>
+          <p>
+            <ion-input type="text" formControlName="age" placeholder="Age"></ion-input>
+          </p>
+          <div *ngFor="let error of validationMessages.age">
+            <ng-container *ngIf="age.hasError(error.type) && age.touched">
+                <small class="errorMessage">{{error.message}}</small>
+            </ng-container>
+        </div>
+          <p>
+            <ion-button type="submit" fill="solid" expand="full" color="none">Sign Up</ion-button>
+          </p>
+          <p class="signUp">Alredy have an account?
+            <br>
+            <br>
+            <a class="signUp" routerLink="/login">Sign in now</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    </ion-content>

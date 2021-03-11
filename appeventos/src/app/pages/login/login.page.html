@@ -1,0 +1,36 @@
+<ion-content>
+    <div class="bg">
+      <div class="login">
+        <div class="login-triangle"></div>
+  
+        <h2 class="login-header">Sign in</h2>
+  
+        <form class="login-container" [formGroup]="loginForm" (ngSubmit)="login()">
+          <p>
+            <ion-input formControlName="username" placeholder="Username"></ion-input>
+          </p>
+          <div *ngFor="let error of validationMessages.username">
+            <ng-container *ngIf="username.hasError(error.type) && username.touched">
+                <small class="errorMessage">{{error.message}}</small>
+            </ng-container>
+        </div>
+          <p>
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+          </p>
+          <div *ngFor="let error of validationMessages.password">
+            <ng-container *ngIf="password.hasError(error.type) && password.touched">
+                <small class="errorMessage">{{error.message}}</small>
+            </ng-container>
+        </div>
+          <p>
+            <ion-button type="submit" fill="solid" expand="full" color="none">Sign In</ion-button>
+          </p>
+          <p class="signUp">Don't have an account yet?
+            <br>
+            <br>
+            <a class="signUp" routerLink="/signup">Sign up now</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </ion-content>

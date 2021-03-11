@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rutaEventos = void 0;
+var express_1 = require("express");
+var event_controller_1 = require("../controllers/event.controller");
+var autenticacion_1 = require("../middlewares/autenticacion");
+exports.rutaEventos = express_1.Router();
+exports.rutaEventos.post('/crear', autenticacion_1.autenticacion, event_controller_1.eventoController.prototype.crearEvento);
+exports.rutaEventos.get('/traer', autenticacion_1.autenticacion, event_controller_1.eventoController.prototype.traerEventos);
+exports.rutaEventos.post('/actualizar', autenticacion_1.autenticacion, event_controller_1.eventoController.prototype.actualizarEvento);
+exports.rutaEventos.post('/eliminar', autenticacion_1.autenticacion, event_controller_1.eventoController.prototype.eliminarEvento);

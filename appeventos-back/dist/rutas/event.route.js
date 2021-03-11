@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.eventRoutes = void 0;
+var express_1 = require("express");
+var event_controller_1 = require("../controllers/event.controller");
+var autenticacion_1 = require("../middlewares/autenticacion");
+exports.eventRoutes = express_1.Router();
+exports.eventRoutes.post('/create', autenticacion_1.autenticacion, event_controller_1.eventController.prototype.createEvent);
+exports.eventRoutes.get('/find', autenticacion_1.autenticacion, event_controller_1.eventController.prototype.findEvents);
+exports.eventRoutes.post('/update', autenticacion_1.autenticacion, event_controller_1.eventController.prototype.updateEvents);
+exports.eventRoutes.post('/delete', autenticacion_1.autenticacion, event_controller_1.eventController.prototype.deleteEvent);

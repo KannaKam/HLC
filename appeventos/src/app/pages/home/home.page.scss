@@ -1,0 +1,24 @@
+.imgCard{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+.participant{
+    color: #555;
+    background-color: #ffdd61;
+    text-shadow: 1px 1px 1px #fff;
+}
+.creator{
+    color: #fff;
+    background-color: #c7469e;
+    text-shadow: 1px 1px 1px #555;
+}
+.options{
+    font-size: large;
+    padding-top: 3%;
+}
+
+.menu{
+    font-size: xx-large !important;
+    text-shadow: 2px 2px 1px #555;
+}
